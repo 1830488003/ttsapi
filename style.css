@@ -45,8 +45,27 @@
     color: #f59e0b;
 }
 
+.ttsapi-mes-button.is-llm {
+    color: #8b5cf6;
+}
+
+.ttsapi-mes-button.is-tts {
+    color: #f59e0b;
+}
+
 .ttsapi-mes-button.is-playing {
     color: #22c55e;
+    background: rgba(34, 197, 94, 0.12);
+}
+
+.ttsapi-mes-button.is-playing i {
+    animation: ttsapi-pulse 1.2s infinite ease-in-out;
+}
+
+@keyframes ttsapi-pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.15); opacity: 0.75; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
 body.mobile .ttsapi-mes-button,
