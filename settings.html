@@ -66,6 +66,107 @@
 
         <hr />
 
+        <div class="setting_item">
+            <div class="setting_name">启用插件</div>
+            <div class="setting_value">
+                <label class="checkbox_label" for="ttsapi-enabled">
+                    <input id="ttsapi-enabled" type="checkbox" />
+                    <span>启用硅基流动语音按钮</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="setting_item">
+            <div class="setting_name">仅角色消息显示按钮</div>
+            <div class="setting_value">
+                <label class="checkbox_label" for="ttsapi-character-only">
+                    <input id="ttsapi-character-only" type="checkbox" />
+                    <span>只给角色楼层注入耳机按钮</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="setting_item">
+            <div class="setting_name">硅基流动 API Key</div>
+            <div class="setting_value" style="width: 100%; display: flex; gap: 8px; align-items: center;">
+                <input id="ttsapi-siliconflow-key" class="text_pole" type="password" placeholder="请输入硅基流动 API Key" style="flex: 1;" />
+                <button id="ttsapi-save-siliconflow-key" class="menu_button">保存</button>
+            </div>
+        </div>
+
+        <div class="setting_item">
+            <div class="setting_name">模型</div>
+            <div class="setting_value" style="width: 100%;">
+                <select id="ttsapi-model" class="text_pole">
+                    <option value="fnlp/MOSS-TTSD-v0.5">fnlp/MOSS-TTSD-v0.5</option>
+                    <option value="IndexTeam/IndexTTS-2">IndexTeam/IndexTTS-2</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="setting_item">
+            <div class="setting_name">默认音色</div>
+            <div class="setting_value" style="width: 100%;">
+                <select id="ttsapi-speaker" class="text_pole"></select>
+            </div>
+        </div>
+
+        <div class="setting_item">
+            <div class="setting_name">朗读模式</div>
+            <div class="setting_value" style="width: 100%;">
+                <select id="ttsapi-read-mode" class="text_pole">
+                    <option value="dialogue">对话模式</option>
+                    <option value="full">全文模式</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="setting_item">
+            <div class="setting_name">用户性别</div>
+            <div class="setting_value" style="width: 100%;">
+                <select id="ttsapi-user-gender" class="text_pole">
+                    <option value="unknown">未知</option>
+                    <option value="male">男</option>
+                    <option value="female">女</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="setting_item">
+            <div class="setting_name">播放语速</div>
+            <div class="setting_value" style="width: 100%;">
+                <input id="ttsapi-speed" class="text_pole" type="number" min="0.5" max="3" step="0.1" />
+            </div>
+        </div>
+
+        <div class="setting_item">
+            <div class="setting_name">音调</div>
+            <div class="setting_value" style="width: 100%;">
+                <input id="ttsapi-pitch" class="text_pole" type="number" min="-1" max="1" step="0.1" />
+            </div>
+        </div>
+
+        <div class="setting_item">
+            <div class="setting_name">运行状态</div>
+            <div class="setting_value" style="width: 100%;">
+                <div id="ttsapi-status" class="ttsapi-status-text">就绪</div>
+            </div>
+        </div>
+
+        <div class="setting_item" style="gap: 8px; flex-wrap: wrap;">
+            <button id="ttsapi-stop" class="menu_button">停止播放</button>
+            <button id="ttsapi-refresh-buttons" class="menu_button">刷新语音按钮</button>
+            <button id="ttsapi-copy-logs" class="menu_button">复制日志</button>
+            <button id="ttsapi-clear-logs" class="menu_button">清空日志</button>
+        </div>
+
+        <div class="setting_item">
+            <div class="setting_name">调试日志</div>
+            <div class="setting_value" style="width: 100%;">
+                <textarea id="ttsapi-logs" class="text_pole" rows="12" readonly placeholder="这里会显示插件运行日志"></textarea>
+            </div>
+        </div>
+
         
     </div>
 </div>
