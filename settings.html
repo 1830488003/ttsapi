@@ -4,125 +4,68 @@
         <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
     </div>
     <div class="inline-drawer-content">
-        <div class="ttsapi-section-tip">
-            硅基流动 API 便宜获取方法：去闲鱼搜“硅基流动 API”，价格大概 1 元左右一个秘钥，里面通常有 14 元额度。<br>
-            这个语音模型费用大概是 5 分钱 1000 字，也就是说 1 块钱大约能听 28 万字，能用很久了。你也可以在下面设置“对话模式”，这样插件就只读对白内容。
-        </div>
-
-        <div class="setting_item">
-            <div class="setting_name">启用插件</div>
-            <div class="setting_value">
-                <label class="switch">
-                    <input id="ttsapi-enabled" type="checkbox" checked>
-                    <span class="slider round"></span>
-                </label>
+        <div class="ttsapi-version-panel">
+            <div class="ttsapi-version-info">
+                <p class="ttsapi-author">作者: 默默</p>
+                <p class="ttsapi-version">
+                    当前版本: <span id="ttsapi-current-version">0.0.0</span>
+                    <span class="ttsapi-update-indicator" style="display: none; color: #f59e0b;">(发现新版!)</span>
+                </p>
             </div>
+            <button id="ttsapi-check-update" class="menu_button">
+                <i class="fa-solid fa-cloud-arrow-down"></i> 检查更新
+            </button>
         </div>
 
-        <div class="setting_item">
-            <div class="setting_name">仅角色消息显示按钮</div>
-            <div class="setting_value">
-                <label class="switch">
-                    <input id="ttsapi-character-only" type="checkbox" checked>
-                    <span class="slider round"></span>
-                </label>
-            </div>
+        <div id="ttsapi-update-guide" class="ttsapi-update-guide" style="display: none;">
+            <p style="color: #f59e0b; margin-bottom: 8px;"><i class="fa-solid fa-circle-info"></i> 发现新版本 <span id="ttsapi-new-version-display">0.0.0</span>！</p>
+            <p style="margin-bottom: 5px;">手动更新步骤：</p>
+            <ol style="margin: 5px 0; padding-left: 20px; color: #ccc; font-size: 12px;">
+                <li>打开酒馆「管理扩展」页面</li>
+                <li>找到并删除此扩展（ttsapi）</li>
+                <li>打开「安装扩展」</li>
+                <li>输入安装地址：<code style="background: #444; padding: 2px 5px; border-radius: 3px; word-break: break-all;">https://github.com/1830488003/ttsapi</code></li>
+                <li>点击安装即可完成更新</li>
+            </ol>
         </div>
 
-        <div class="setting_item">
-            <div class="setting_name">硅基流动模型</div>
-            <div class="setting_value">
-                <select id="ttsapi-model" class="text_pole">
-                    <option value="fnlp/MOSS-TTSD-v0.5">fnlp/MOSS-TTSD-v0.5</option>
-                    <option value="IndexTeam/IndexTTS-2">IndexTeam/IndexTTS-2</option>
-                </select>
-            </div>
+        <div class="description_text" style="text-align: center; margin-top: 5px;">
+            有问题请联系作者 QQ群: 118774271
         </div>
+        <hr />
 
         <div class="setting_item">
-            <div class="setting_name">默认音色</div>
-            <div class="setting_value">
-                <select id="ttsapi-speaker" class="text_pole">
-                    <option value="alex">alex（男·青年·清亮干练）</option>
-                    <option value="anna">anna（女·青年·温柔清甜）</option>
-                    <option value="bella">bella（女·青年偏御姐·沉稳知性）</option>
-                    <option value="benjamin">benjamin（男·中年·醇厚低沉）</option>
-                    <option value="charles">charles（男·青年·阳光爽朗）</option>
-                    <option value="claire">claire（女·青年·灵动俏皮）</option>
-                    <option value="david">david（男·中年·温润儒雅）</option>
-                    <option value="diana">diana（女·中年·优雅端庄）</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="setting_item">
-            <div class="setting_name">硅基流动 API Key</div>
+            <div class="setting_name">新手使用教程</div>
             <div class="setting_value" style="width: 100%;">
-                <input id="ttsapi-siliconflow-key" class="text_pole" type="password" placeholder="输入你的硅基流动 API Key" style="width: 100%;">
-                <div class="ttsapi-actions-row" style="margin-top: 8px;">
-                    <button id="ttsapi-save-siliconflow-key" class="menu_button">保存 Key</button>
-                </div>
-                <div class="ttsapi-mini-tip">Key 会保存到浏览器本地存储（扩展设置）里，刷新页面后仍会保留。</div>
+                <details class="ttsapi-quickstart-details">
+                    <summary style="cursor: pointer; color: #f59e0b;">📖 点我展开硅基流动语音使用教程（推荐先看）</summary>
+                    <div class="ttsapi-quickstart-content" style="padding: 10px; background: #2a2a2a; border-radius: 5px; margin-top: 8px; font-size: 12px; color: #ccc; line-height: 1.7;">
+                        <p style="margin: 0 0 10px 0;"><b>1️⃣ 先做什么？</b></p>
+                        <p style="margin: 0 0 10px 0; padding-left: 10px;">先准备一个硅基流动 API Key，并填到下面的输入框里保存。</p>
+
+                        <p style="margin: 0 0 10px 0;"><b>2️⃣ 模型怎么选？</b></p>
+                        <p style="margin: 0 0 5px 0; padding-left: 10px;">- <b>全文模式</b>：适合整段叙述直接朗读</p>
+                        <p style="margin: 0 0 5px 0; padding-left: 10px;">- <b>对话模式</b>：适合只读对白，MOSS 模型会先走 DeepSeek 整理脚本</p>
+                        <p style="margin: 0 0 10px 0; padding-left: 10px;">- <b>fnlp/MOSS-TTSD-v0.5</b> 更适合多说话人对话</p>
+
+                        <p style="margin: 0 0 10px 0;"><b>3️⃣ 音色和语速怎么调？</b></p>
+                        <p style="margin: 0 0 5px 0; padding-left: 10px;">① 选择你喜欢的默认音色</p>
+                        <p style="margin: 0 0 5px 0; padding-left: 10px;">② 调整“播放语速”，这是浏览器播放速度，不是模型生成速度</p>
+                        <p style="margin: 0 0 10px 0; padding-left: 10px;">③ 需要对话人物判断更准时，可以设置“用户性别”</p>
+
+                        <p style="margin: 0 0 10px 0;"><b>4️⃣ 怎么使用？</b></p>
+                        <p style="margin: 0 0 5px 0; padding-left: 10px;">① 进入聊天界面</p>
+                        <p style="margin: 0 0 5px 0; padding-left: 10px;">② 电脑端可以直接点每层楼旁边的耳机按钮；手机端耳机按钮通常会隐藏在消息右侧的“三个点”按钮菜单里</p>
+                        <p style="margin: 0 0 5px 0; padding-left: 10px;">③ 点击后插件会自动生成语音并播放</p>
+                        <p style="margin: 0 0 5px 0; padding-left: 10px;">④ 如果你使用的是 <b>对话模式 + MOSS</b>，因为会先调用 DeepSeek 做情绪分析和对白整理，生成时间通常大约要十几秒，这期间请不要重复点击按钮</p>
+                        <p style="margin: 0; color: #fbbf24;"><b>💡 推荐新手最简单用法：</b> 填 Key → 保存 → 选模型 → 选音色 → 点楼层按钮直接听。</p>
+                    </div>
+                </details>
             </div>
         </div>
 
-        <div class="setting_item">
-            <div class="setting_name">播放语速</div>
-            <div class="setting_value">
-                <input id="ttsapi-speed" class="text_pole" type="number" min="0.5" max="3" step="0.1" style="width: 90px;" value="1">
-            </div>
-        </div>
+        <hr />
 
-        <div class="setting_item">
-            <div class="setting_name">朗读模式</div>
-            <div class="setting_value">
-                <select id="ttsapi-read-mode" class="text_pole">
-                    <option value="full">全文模式</option>
-                    <option value="dialogue">对话模式（只读“”里的内容）</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="setting_item">
-            <div class="setting_name">用户性别</div>
-            <div class="setting_value">
-                <select id="ttsapi-user-gender" class="text_pole">
-                    <option value="unknown">未指定</option>
-                    <option value="male">男</option>
-                    <option value="female">女</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="setting_item">
-            <div class="setting_name">音调</div>
-            <div class="setting_value">
-                <input id="ttsapi-pitch" class="text_pole" type="number" min="-1" max="1" step="0.1" style="width: 90px;" value="0">
-            </div>
-        </div>
-
-        <div class="setting_item">
-            <div class="setting_name">播放状态</div>
-            <div class="setting_value">
-                <span id="ttsapi-status">未开始</span>
-            </div>
-        </div>
-
-        <div class="setting_item">
-            <div class="setting_name">操作</div>
-            <div class="setting_value ttsapi-actions-row">
-                <button id="ttsapi-stop" class="menu_button">停止播放</button>
-                <button id="ttsapi-refresh-buttons" class="menu_button">刷新按钮</button>
-                <button id="ttsapi-copy-logs" class="menu_button">复制日志</button>
-                <button id="ttsapi-clear-logs" class="menu_button">清空日志</button>
-            </div>
-        </div>
-
-        <div class="setting_item">
-            <div class="setting_name">调试日志</div>
-            <div class="setting_value" style="width: 100%;">
-                <textarea id="ttsapi-logs" class="text_pole" rows="10" readonly placeholder="这里会显示硅基流动语音的调试日志..." style="width: 100%; resize: vertical;"></textarea>
-            </div>
-        </div>
+        
     </div>
 </div>

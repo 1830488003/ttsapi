@@ -2,6 +2,28 @@
     padding: 10px;
 }
 
+.ttsapi-version-panel {
+    padding: 10px;
+    background: var(--dialog-background-color, #1a1a2e);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.ttsapi-version-panel p {
+    margin: 5px 0;
+    color: #aaa;
+    font-size: 13px;
+}
+
+.ttsapi-update-guide {
+    padding: 10px;
+    background: rgba(245, 158, 11, 0.1);
+    border-radius: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .ttsapi-section-tip {
     padding: 10px;
     margin-bottom: 10px;
