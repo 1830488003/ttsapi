@@ -1,0 +1,12 @@
+{
+    "display_name": "硅基流动语音",
+    "loading_order": 1001,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "css": "style.css",
+    "author": "Cline",
+    "version": "0.1.0",
+    "homePage": "https://www.siliconflow.cn",
+    "description": "为每条消息添加硅基流动语音朗读按钮的 SillyTavern 第三方扩展"
+}

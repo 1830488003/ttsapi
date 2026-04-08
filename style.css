@@ -1,0 +1,56 @@
+.ttsapi-settings-root .inline-drawer-content {
+    padding: 10px;
+}
+
+.ttsapi-section-tip {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: rgba(59, 130, 246, 0.12);
+    color: var(--SmartThemeBodyColor, #ddd);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.ttsapi-mini-tip {
+    margin-top: 6px;
+    color: #999;
+    font-size: 11px;
+}
+
+.ttsapi-actions-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.ttsapi-mes-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    min-height: 28px;
+    margin-left: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    color: var(--SmartThemeBodyColor, #ddd);
+}
+
+.ttsapi-mes-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.ttsapi-mes-button.is-loading {
+    color: #f59e0b;
+}
+
+.ttsapi-mes-button.is-playing {
+    color: #22c55e;
+}
+
+body.mobile .ttsapi-mes-button,
+.touch .ttsapi-mes-button {
+    min-width: 34px;
+    min-height: 34px;
+}
